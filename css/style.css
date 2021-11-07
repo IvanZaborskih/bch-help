@@ -1,0 +1,897 @@
+/*
+Размеры и отступы
+Внешнее оформления
+Шрифты
+Позиционирование
+Анимация и трансформация
+*/
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    margin: 0;
+    height: 100%;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: #1B1B1B;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.btn {
+    margin-bottom: 30px;
+
+    display: inline-block;
+}
+
+
+/* Container
+================================= */
+.container {
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* Section
+================================= */
+.section {
+    padding: 91px 0 165px;
+}
+
+.section__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section--subject {
+    padding-top: 50px;
+}
+
+/* First page
+================================= */
+.first__page {
+    height: 800px;
+
+    background: url(../img/first-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first__page--cover {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* Header
+================================= */
+.header {
+    width: 100%;
+    padding-top: 21px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header--fill {
+    padding: 15px 0;
+
+    background-color: #2F2F2F;
+
+    position: initial;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo--text {
+    width: 58px;
+    height: 58px;
+
+
+    background-color: #fff;
+    border-radius: 90px;
+
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+
+    position: relative;
+}
+
+.logo__letters {
+    color: #1B1B1B;
+    text-decoration: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    transform: translate3d(-50%, -50%, 0);
+}
+
+
+/* Nav
+================================= */
+.nav {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    margin-right: 58px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+
+    position: relative;
+
+    transition: color .1s linear;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.nav__link:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    background-color: #FFFCA9;
+    opacity: 0;
+
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    color: #FFFCA9;
+}
+
+.nav__link:hover::after {
+    opacity: 1;
+}
+
+
+/* Main info
+================================= */
+.first__main {
+    width: 100%;
+
+    position: absolute;
+}
+
+.first__info {
+    text-align: center;
+}
+
+.first__title {
+    margin-bottom: 40px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 75px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.first__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+/* Training course
+================================= */
+.training__courses {
+    margin-top: 78px;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: center;
+}
+
+.course {
+    width: 48%;
+    height: 350px;
+
+    position: relative;
+}
+
+.course--3 {
+    background: url(../img/3-level.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.course--4 {
+    background: url(../img/4-level.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.course--5sem {
+    background: url(../img/5-semestr.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.course--6sem {
+    background: url(../img/6-semestr.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.course--7sem {
+    background: url(../img/7-semestr.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.course--8sem {
+    background: url(../img/8-semestr.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.block__link {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.name__course {
+    width: 214px;
+    height: 74px;
+
+    background-color: #464646;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+
+    position: absolute;
+    right: 0;
+    bottom: 39px;
+    z-index: 1;
+}
+
+.name__semestr {
+    width: 300px;
+}
+
+.name__cource--center {
+    position: relative;
+}
+
+.name__course div {
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    transform: translate3d(0, -50%, 0);
+}
+
+
+/* Footer
+================================= */
+.footer {
+    padding: 20px 0;
+    flex: 0 0 auto;
+
+    background-color: #2B2B2B;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__info {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #FFFCA9;
+    text-align: center;
+}
+
+.footer__link {
+    color: #306BA0;
+    text-decoration: none;
+}
+
+
+/* Subjects
+================================= */
+.subjects__inner {
+    margin-top: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subjects__col {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.subjects__col--right {
+    align-items: flex-end;
+}
+
+.subject__wrap {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 21px;
+
+    border-radius: 90px;
+    background-color: #C4C4C4;
+}
+
+.circle--right {
+    margin-right: 0;
+    margin-left: 21px;
+}
+
+.circle--left {
+    display: none;
+}
+
+.subject__info {
+    max-width: 500px;
+    padding: 20px 25px 20px 20px;
+
+    background-color: #464646;
+    border-radius: 15px;
+}
+
+.subject__link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+
+    border-radius: 15px;
+}
+
+.subject__link--disc {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subject__info:hover {
+    background-color: #202020;
+}
+
+
+/* Discipline
+================================= */
+.disciplines__type {
+    margin-top: 64px;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subject__wrap--dis {
+    margin-bottom: 0;
+    width: 29%;
+
+    display: block;
+}
+
+.discipline__type {
+    margin-top: 150px;
+    padding-bottom: 80px;
+
+    border: 1px solid #464646;
+    border-radius: 15px;
+}
+
+.discipline__title {
+    margin: 35px 0 5px 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.discipline__title--lab {
+    margin: 35px 0 16px 0;
+}
+
+.disc__video {
+    margin-top: 40px;
+}
+
+.video__inner {
+    margin-bottom: 80px;
+
+    text-align: center;
+}
+
+.video__inner:last-child {
+    margin-bottom: 0;
+}
+
+.video__wrap {
+    width: 100%;
+    max-width: 853px;
+    height: 100%;
+    max-height: 480px;
+    margin: 0 auto;
+}
+
+.thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .thumb-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+}
+
+.video__subtitle {
+    margin-top: 22px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.under {
+    width: 500px;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 46px;
+
+    background-color: #000;
+}
+
+.labs__files {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    text-align: center;
+}
+
+.lab__files {
+    padding-left: 200px;
+    padding-right: 5px;
+    margin-top: 75px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+.lab__files--lection {
+    margin-bottom: 65px;
+}
+
+.lab__files li {
+    margin-bottom: 7px;
+}
+
+.link__text {
+    display: block;
+    text-decoration: none;
+    color: rgb(44, 180, 176);
+}
+
+.link__text:hover {
+    text-decoration: underline;
+}
+
+.link__text:visited {
+    color: rgb(44, 180, 176);
+}
+
+
+
+/* MEDIA
+@media
+1) max-width:1200
+2) 992
+3) 768
+4) 576
+*/
+@media (max-width: 1200px) {
+
+    .header__logo--text {
+        width: 46px;
+        height: 46px;
+
+        font-size: 23px;
+    }
+
+    .first__page {
+        height: 670px;
+    }
+
+    .first__title {
+        font-size: 70px;
+    }
+
+    .first__subtitle {
+        font-size: 29px;
+    }
+
+    .section__title {
+        font-size: 33px;
+    }
+
+    .section {
+        padding: 60px 0 100px;
+    }
+
+    .training__courses {
+        margin-top: 52px;
+    }
+
+    .course {
+        height: 300px;
+    }
+
+    .subject__wrap {
+        margin-bottom: 20px;
+    }
+
+    .subject__link {
+        font-size: 20px;
+    }
+
+    .subjects__col {
+        width: 48%;
+    }
+
+    .circle {
+        min-width: 15px;
+        min-height: 15px;
+        margin-right: 10px;
+    }
+
+    .circle--right {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .footer {
+        padding: 18px 0;
+    }
+
+    .footer__info {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .first__title {
+        font-size: 60px;
+    }
+
+    .first__subtitle {
+        font-size: 25px;
+    }
+
+    .first__page {
+        height: 620px;
+    }
+
+    .section {
+        padding: 50px 0 75px;
+    }
+
+    .training__courses {
+        margin-top: 44px;
+    }
+
+    .course {
+        width: 49%;
+        height: 275px;
+    }
+
+    .name__course {
+        width: 192px;
+        height: 65px;
+        font-size: 38px;
+
+        bottom: 25px;
+    }
+
+    .name__semestr {
+        width: 220px;
+    }
+
+    .subjects__inner {
+        margin-top: 50px;
+    }
+
+    .subject__info {
+        padding: 13px 25px 13px 20px;
+    }
+
+    .disciplines__type {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .discipline__type {
+        margin-top: 50px;
+    }
+
+    .subject__wrap--dis {
+        width: 32%;
+    }
+
+    .discipline__title {
+        margin: 35px 0 0 0;
+    }
+
+    .lab__files {
+        margin-top: 35px;
+        padding-left: 90px;
+    }
+
+    .lab__files--lection {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 50px 0 63px;
+    }
+
+    .course {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .course:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer__info {
+        font-size: 13px;
+    }
+
+    .subjects__col {
+        width: 100%;
+    }
+
+    .subjects__col--right {
+        align-items: unset;
+    }
+
+    .circle--right {
+        display: none;
+    }
+
+    .circle--left {
+        display: block;
+    }
+
+    .disciplines__type {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subject__wrap--dis {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .subject__info--similar {
+        max-width: 450px;
+    }
+
+    .lab__files {
+        padding-left: 60px;
+
+        font-size: 20px;
+    }
+
+    .discipline__title {
+        font-size: 30px;
+    }
+
+    .labs__files {
+        font-size: 28px;
+    }
+
+    .video__inner {
+        margin-bottom: 65px;
+    }
+
+    .discipline__type {
+        padding-bottom: 30px;
+    }
+
+    .link__text {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .section {
+        padding: 25px 0 63px;
+    }
+
+    .section__title {
+        font-size: 24px;
+    }
+
+    .training__courses {
+        margin-top: 23px;
+    }
+
+    .nav {
+        font-size: 15px;
+    }
+
+    .nav__link {
+        margin-right: 30px;
+    }
+
+    .first__title {
+        font-size: 44px;
+    }
+
+    .first__subtitle {
+        font-size: 20px;
+    }
+
+    .course {
+        height: 250px;
+    }
+
+    .name__semestr {
+        width: 200px;
+    }
+
+    .name__course {
+        font-size: 34px;
+    }
+
+    .subject__info {
+        padding: 13px 15px 13px 20px;
+    }
+
+    .subjects__inner {
+        margin-top: 30px;
+    }
+
+    .subject__link {
+        font-size: 16px;
+    }
+
+    .subject__wrap {
+        margin-bottom: 10px;
+    }
+
+    .disciplines__type {
+        margin-top: 35px;
+    }
+
+    .section__title--discip {
+        font-size: 24px;
+    }
+
+    .lab__files {
+        padding-left: 25px;
+    }
+
+    .video__subtitle  {
+        margin-top: 20px;
+
+        font-size: 20px;
+    }
+
+    .under {
+        max-width: 200px;
+        margin-top: 30px;
+    }
+
+    .video__inner {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 320px) {
+}
+
+
+
+
+
+
+
+
+
